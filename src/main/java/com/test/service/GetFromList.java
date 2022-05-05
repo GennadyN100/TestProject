@@ -13,7 +13,7 @@ public class GetFromList {
     Map<String, String> map = Map.of("keyFirst", "valueFirst", "keySecond", "valueSecond");
 
     @GetMapping(value = "/getFromList")
-    public ResponseEntity<String> getMessage(@RequestParam("key") String key) {
+    public ResponseEntity<String> getResponse(@RequestParam("key") String key) {
         if (map.containsKey(key)) {
             return ResponseEntity.status(HttpStatus.OK).body(map.get(key));
         }
