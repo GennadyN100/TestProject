@@ -1,14 +1,12 @@
-package com;
+package com.controllers;
 
-import com.controllers.SumController;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class SumTest {
-
+class SumControllerTest {
     @Test
-    public void postBodyTest() {
+    void sum() {
         SumController sumTest = new SumController();
         String result = sumTest.postBody("2 3");
         assertEquals(result, "5");

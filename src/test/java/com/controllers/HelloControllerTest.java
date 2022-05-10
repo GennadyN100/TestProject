@@ -1,11 +1,10 @@
-package com;
+package com.controllers;
 
-import com.controllers.HelloController;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class HelloTest {
+class HelloControllerTest {
     @Test
     public void getMessageTest() {
         HelloController helloTest = new HelloController();
