@@ -17,8 +17,7 @@ public class GetFromListController {
     public ResponseEntity<String> getResponse(@RequestParam("key") String key) throws ControllerException {
         if (map.containsKey(key)) {
             return ResponseEntity.status(HttpStatus.OK).body(map.get(key));
-        }
-        else {
+        } else {
             throw new ControllerException("ControllerException: element not found");
         }
     }

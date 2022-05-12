@@ -9,6 +9,6 @@ class SumControllerTest {
     void sum() {
         SumController sumTest = new SumController();
         String result = sumTest.postBody("2 3");
-        assertEquals(result, "5");
+        assertEquals("5", result);
     }
 }

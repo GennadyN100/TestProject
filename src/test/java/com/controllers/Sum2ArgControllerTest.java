@@ -1,12 +1,16 @@
 package com.controllers;
 
+import com.model.SumRequest;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class Sum2ArgControllerTest {
     @Test
-    public void sum2ArgTest() {
-        assertEquals(new Sum2ArgController().sum(2, 3), 5);
+    void sum2ArgTest() {
+        SumRequest sumRequest = new SumRequest();
+        sumRequest.setFirstValue(2);
+        sumRequest.setSecondValue(3);
+        assertEquals(5, new Sum2ArgController().sum2Arg(sumRequest));
     }
 }

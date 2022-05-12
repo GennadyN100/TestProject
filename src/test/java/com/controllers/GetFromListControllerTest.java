@@ -11,16 +11,18 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class GetFromListControllerTest {
 
     @Test
-    public void getResponseTest() throws ControllerException {
+    void getResponseTest() throws ControllerException {
         assertEquals(new GetFromListController().getResponse("keySecond"),
                 ResponseEntity.status(HttpStatus.OK).body("valueSecond"));
     }
 
     @Test
-    public void getResponseExceptionTest() {
+    void getResponseExceptionTest() {
+
+        GetFromListController getFromListController = new GetFromListController();
 
         ControllerException exception = Assertions.assertThrows(ControllerException.class, () ->
-            new GetFromListController().getResponse("keySecond5")
+            getFromListController.getResponse("keySecond5")
         );
 
         Assertions.assertEquals("ControllerException: element not found", exception.getMessage());
