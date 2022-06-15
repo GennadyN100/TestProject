@@ -22,7 +22,7 @@ class GetFromListControllerTest {
         GetFromListController getFromListController = new GetFromListController();
 
         ControllerException exception = Assertions.assertThrows(ControllerException.class, () ->
-            getFromListController.getResponse("keySecond5")
+                getFromListController.getResponse("keySecond5")
         );
 
         Assertions.assertEquals("ControllerException: element not found", exception.getMessage());
